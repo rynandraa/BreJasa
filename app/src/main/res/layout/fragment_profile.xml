@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue_primary"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/sample_avatar"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_nama_pengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Nama Pengguna"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="@string/email"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_background"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:id="@+id/profile_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="@string/profile"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/pengaturanAccbtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_outline"
+                android:drawablePadding="8dp"
+                android:text="@string/pengaturan_akun"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/hubungikamibtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_outline"
+                android:drawablePadding="8dp"
+                android:text="@string/hubungi_kami"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/aboutUsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_outline"
+                android:drawablePadding="8dp"
+                android:text="@string/tentang_kami"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:backgroundTint="@color/danger_main"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- TextView untuk menampilkan nama pengguna -->
+
+    <!-- TextView untuk menampilkan nomor telepon -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

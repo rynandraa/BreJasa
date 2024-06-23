@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">BreJasa</string>
+    <string name="email">Email</string>
+    <string name="phone">Nomer Handphone</string>
+    <string name="beranda">Beranda</string>
+    <string name="riwayat">Riwayat</string>
+    <string name="profil">Profil</string>
+    <string name="title_login_page">Selamat Datang</string>
+    <string name="message_login_page">Masuk di bawah untuk akses akun mu</string>
+    <string name="password">Password</string>
+    <string name="login">Masuk</string>
+    <string name="registerInfo">Belum Punya Akun?<font color="#4496D2"> Daftar</font></string>
+    <string name="lupaPassword"><font color="#4496D2"> Lupa Password</font></string>
+    <string name="message_register_page">Daftar sekarang untuk mulai usahamu</string>
+    <string name="name">Nama</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="daftar">Daftar</string>
+    <string name="haveAccount">Sudah punya akun sebelumnya?<font color="#4496D2"> Masuk</font></string>
+    <string name="pass_salah">Password Tidak Cocok</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello home fragment</string>
+    <string name="hello_riwayat_fragment">Hello riwayat fragment</string>
+    <string name="hello_profile_fragment">Hello riwayat fragment</string>
+    <string name="profile">Profile</string>
+    <string name="pengaturan_akun">Pengaturan Akun</string>
+    <string name="hubungi_kami">Hubungi Kami</string>
+    <string name="tentang_kami">Tentang Kami</string>
+    <string name="logout">Keluar</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string-array name="kategoriJasa">
+        <item>Pijat</item>
+        <item>Bekam</item>
+        <item>Akupuntur</item>
+    </string-array>
+
+    <string-array name="kategoriUsaha">
+        <item>Kebersihan dan Perawatan Rumah</item>
+        <item>Kesehatan dan Kecantikan</item>
+        <item>Perbaikan dan Pemeliharaan</item>
+    </string-array>
+
+
+</resources>

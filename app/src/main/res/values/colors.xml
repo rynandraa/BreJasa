@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_primary">#2597E9</color>
+    <color name="blue_hover">#1F7EC2</color>
+    <color name="blue_border">#B6DCF8</color>
+    <color name="blue_surface">#F3FBFF</color>
+    <color name="blue_focus">#BED5E6</color>
+    <color name="grey_text">#757575</color>
+
+    <color name="grey_bg">#E5E5E5</color>
+
+    <color name="green">#43936C</color>
+    <color name="yellow">#FFB20E</color>
+    <color name="danger_main">#CB3A31</color>
+
+
+</resources>

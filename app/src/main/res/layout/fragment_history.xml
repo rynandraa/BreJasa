@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg_history">
+
+    <!-- Title di atas TabLayout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Transaksi"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppinsbold"
+        android:textColor="@android:color/white"
+        android:gravity="left"
+        android:layout_marginStart="32dp"/>
+
+    <!-- Bagian TabLayout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/blue_primary"
+        app:tabIndicatorColor="@color/white"
+        app:tabTextColor="@color/grey_text"
+        app:tabSelectedTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_diproses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diproses" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_selesai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selesai" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <!-- ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:listitem="@layout/item_history"/>
+
+</LinearLayout>

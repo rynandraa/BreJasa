@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_surface"
+    tools:context=".ui.history.HistoryDetailActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/white">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="tombol kembali"
+            android:src="@drawable/ic_back_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Judul aktivitas (nama aktivitas) -->
+
+        <!-- ID pesanan -->
+
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Detail Pesanan"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDetailPelanggan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cv_actionBar"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="20dp">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="16dp"
+          android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_dipesanOleh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Dipesan oleh"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/textViewNamaPelanggan"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppinsbold"
+                android:text="Nama Pelanggan"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@id/status_pesanan" />
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="right">
+          <ImageView
+              android:id="@+id/btnOpenMaps"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="right"
+              android:padding="10dp"
+              android:src="@drawable/ic_location" />
+
+          <ImageView
+              android:id="@+id/btnHubungiPelanggan"
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="10dp"
+              android:padding="10dp"
+              android:src="@drawable/ic_chat" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/textViewDetailAlamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detail Alamat"
+            android:fontFamily="@font/poppinsregular"/>
+
+        <TextView
+            android:id="@+id/textViewAlamatPelanggan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Alamat Pelanggan"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="6dp"/>
+
+        <TextView
+            android:id="@+id/textViewNomorPelanggan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Telepon"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginTop="6dp"/>
+
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvJenisLayanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cvDetailPelanggan"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="20dp">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="16dp"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_layananDipesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Layanan yang dipesan"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="1 x"
+              android:fontFamily="@font/poppinsmedium"
+              android:textColor="@color/black"
+              android:layout_gravity="center_vertical"/>
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginStart="8dp">
+            <TextView
+                android:id="@+id/textViewNamaLayanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="24dp"
+                android:text="Nama Layanan"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/textViewKategoriLayanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="kategori"/>
+
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?android:attr/listDivider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Pesanan"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Biaya"
+                android:layout_marginTop="12dp"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="right">
+
+            <TextView
+                android:id="@+id/textViewJenisPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirumah"/>
+
+            <TextView
+                android:id="@+id/textViewTotalBiaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp. 10100"
+                android:layout_marginTop="12dp"/>
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRincianPesanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/cvJenisLayanan"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:cardCornerRadius="20dp">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="16dp"
+          android:layout_marginBottom="24dp"
+          android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_rincianPesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Rincian Pesanan"
+            android:layout_gravity="left"
+            android:textColor="@android:color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginStart="8dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Id Pesanan"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waktu Pemesanan"
+                android:layout_marginTop="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pembayaran"
+                android:layout_marginTop="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status pemesanan"
+                android:layout_marginTop="12dp"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:gravity="right">
+
+            <TextView
+                android:id="@+id/textViewIdPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="idPesanan" />
+
+            <TextView
+                android:id="@+id/textViewTanggalPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:layout_marginTop="12dp"/>
+            <TextView
+                android:id="@+id/textViewMetodeBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tunai"
+                android:layout_marginTop="12dp"/>
+            <TextView
+                android:id="@+id/textStatusPesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diproses"
+                android:layout_marginTop="12dp"/>
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+
+      </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.ryan.obre_mitra.customview.CustomButtonIcon
+        android:id="@+id/btnPesananBatal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/danger_main"
+        android:text="Batalkan Pesanan"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvRincianPesanan"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.ryan.obre_mitra.customview.CustomButtonIcon
+        android:id="@+id/btnPesananSelesai"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Selesaikan Pesanan"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPesananBatal"
+        app:layout_constraintVertical_bias="0.0" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

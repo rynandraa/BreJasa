@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_home"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- TextView untuk menampilkan nama pengguna -->
+
+    <LinearLayout
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="12dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="@string/selamat_datang"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_nama_pengguna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="nama pengguna"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardviewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="24dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview1"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            android:elevation="6dp"
+            android:layout_marginBottom="8dp"
+            tools:layout_editor_absoluteY="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="28dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:id="@+id/text_nama_usaha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppinsbold"
+                    android:text="Nama Usaha"
+                    android:visibility="gone"
+                    android:textColor="@color/blue_primary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_jumlah_pesanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Jumlah Pesanan Hari Ini: "
+                    android:visibility="gone"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_penghasilan_hari_ini"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Penghasilan Hari Ini: Rp "
+                    android:visibility="gone"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floating_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginBottom="12dp"
+                    android:src="@drawable/baseline_add_24"
+                    android:tint="@color/white"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/blue_primary"
+                    app:layout_anchorGravity="center"
+                    tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+                <TextView
+                    android:id="@+id/tambah_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="Tambah Data Usaha"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="24dp"
+        android:gravity="center_horizontal"
+        android:clipChildren="false"
+        app:layout_constraintTop_toBottomOf="@id/cardviewInfo">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_menu"
+            android:layout_width="85dp"
+            android:layout_height="130dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            android:layout_margin="8dp"
+            android:clipChildren="false">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:src="@drawable/menu_ilustration" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Menu Jasa"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_laporan"
+            android:layout_width="85dp"
+            android:layout_height="130dp"
+            android:layout_marginHorizontal="30dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            android:layout_margin="8dp"
+            android:clipChildren="false"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="101dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/laporan_ilustration" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Laporan"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_rating"
+            android:layout_width="85dp"
+            android:layout_height="130dp"
+            android:background="@color/white"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            android:layout_margin="8dp"
+            android:clipChildren="false"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:elevation="10dp"
+                android:src="@drawable/rating_ilustration" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Rating"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

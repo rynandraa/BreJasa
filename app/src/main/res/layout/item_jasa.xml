@@ -1,0 +1,60 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageService"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:cropToPadding="false"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/namaLayananTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Nama Layanan"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppinsbold" />
+
+            <TextView
+                android:id="@+id/hargaTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Harga Layanan"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                android:textSize="16sp" /> <!-- Sesuaikan warna dengan tema Anda -->
+
+            <TextView
+                android:id="@+id/deskripsiTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi Singkat"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
